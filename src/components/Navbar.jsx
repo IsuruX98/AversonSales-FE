@@ -46,7 +46,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`flex justify-between w-full py-4 lg:px-36 px-12 sticky top-0 z-[999] ${
+            className={`flex justify-between w-full py-4 lg:px-20 px-12 sticky top-0 z-[999] ${
                 isAtTop || visible
                     ? "top-[-100%] bg-transparent transition ease-in-out duration-500"
                     : "bg-[#F8F3ED] transition ease-in-out duration-500"
