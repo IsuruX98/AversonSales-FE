@@ -3,6 +3,7 @@ import hero from "../asserts/images/bg.png";
 import Industries from "../components/Industries";
 import Solutions from "../components/Solutions";
 import Difference from "../components/Difference";
+import Careers from "../components/Careers";
 
 const Home = () => {
     const gradientStyle = {
@@ -44,6 +45,9 @@ const Home = () => {
             </div>
             <div id="difference">
                 <Difference />
+            </div>
+            <div id="Careers">
+                <Careers />
             </div>
 
         </div>
