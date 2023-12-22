@@ -21,14 +21,14 @@ const Home = () => {
                 {/* Dark fade overlay */}
                 <div className="absolute inset-0" style={gradientStyle}></div>
 
-                <div className="absolute inset-0 flex flex-col px-32 text-white pt-[400px]">
-                    <h1 className="lg:text-[20px] text-4xl text-white mb-4 leading-[105%]">
+                <div className="absolute inset-0 flex flex-col px-10 md:px-32 text-white pt-[400px]">
+                    <h1 className="lg:text-[20px] md:text-[20px] text-[15px] text-4xl text-white mb-4 leading-[105%]">
                         Extra Aspirational
                     </h1>
-                    <p className="lg:text-[70px] leading-[81.25%]">
+                    <p className="lg:text-[70px] md:text-[60px] text-[35px] lg:leading-[81.25%] md:leading-[70.25%] ">
                         Avero. Pushing
                     </p>
-                    <p className="lg:text-[70px] leading-[81.25%]">
+                    <p className="lg:text-[70px] md:text-[60px] text-[35px] lg:leading-[81.25%] ">
                         engineering forward.
                     </p>
                 </div>
