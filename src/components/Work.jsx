@@ -63,7 +63,7 @@ const Work = () => {
                 </div>
                 <div
                     ref={containerRef}
-                    className="flex gap-2 sm:gap-24 p-8 xl:px-40 px-14 cursor-grab relative"
+                    className="flex gap-6 sm:gap-20 p-8 xl:px-40 px-14 cursor-grab relative group"
                     style={{
                         flex: "0 0 auto",
                         whiteSpace: "normal", // Allow line breaks
@@ -82,7 +82,7 @@ const Work = () => {
                     {works.map((work, index) => (
                         <div
                             key={index}
-                            className="relative overflow-hidden xl:w-auto w-64 cursor-pointer transition-transform transform"
+                            className="relative overflow-hidden xl:w-auto w-64 cursor-pointer transition-transform transform hover:scale-105"
                             style={{
                                 flex: "0 0 auto",
                                 minWidth: "100px",
@@ -95,11 +95,15 @@ const Work = () => {
                                 style={{ width: "100%", height: "auto", maxWidth: "100%" }}
                                 className="rounded-2xl"
                             />
-                            <div className="absolute bottom-0 left-0 w-full rounded-2xl h-full bg-black bg-opacity-50 transition-opacity opacity-0 hover:opacity-100 hover:transition-opacity duration-300 ease-in-out">
-                                <p
-                                    className="text-white absolute bottom-5 left-0 right-0 mx-2 sm:mx-5"
-                                    dangerouslySetInnerHTML={{ __html: work.text }}
-                                />
+                            <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
+                                <div
+                                    className="w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+                                >
+                                    <p
+                                        className="text-white absolute bottom-5 left-0 right-0 mx-2 sm:mx-5"
+                                        dangerouslySetInnerHTML={{ __html: work.text }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     ))}

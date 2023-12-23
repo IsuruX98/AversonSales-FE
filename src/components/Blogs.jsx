@@ -65,7 +65,7 @@ const Blogs = () => {
           </div>
           <div
               ref={containerRef}
-              className="flex gap-2 sm:gap-6 px-8 xl:px-28 cursor-grab relative overflow-x-auto"
+              className="flex gap-2 sm:gap-6 md:px-8 px-6 xl:px-28 cursor-grab relative overflow-x-auto"
               style={{
                 flex: "0 0 auto",
                 whiteSpace: "normal",
@@ -84,7 +84,7 @@ const Blogs = () => {
             {blogData.map((blog, index) => (
                 <div
                     key={index}
-                    className="relative overflow-hidden w-80 cursor-pointer transition-transform transform hover:scale-105"
+                    className="relative m-5 overflow-hidden w-80 cursor-pointer transition-transform transform hover:scale-105"
                     style={{
                       flex: "0 0 auto",
                       minWidth: "100px",

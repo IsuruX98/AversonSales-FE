@@ -10,7 +10,11 @@ const Industries = () => {
         "absolute inset-0 bg-black hover:bg-opacity-0 bg-opacity-40 transition duration-300";
 
     const cardStyle =
-        "absolute bottom-0 left-0 right-0 bg-white md:p-5 p-2 opacity-0 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:-translate-y-1";
+        "absolute bottom-0 left-0 right-0 bg-white md:p-5 p-2 opacity-0 transform translate-y-full transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0";
+
+    const hoverStyle = {
+        transition: "0.8s ease-in-out",
+    };
 
     return (
         <div className="">
@@ -29,31 +33,45 @@ const Industries = () => {
                     <hr className="border-t-2 border-gray-500" />
                     <p className="text-[16px] py-7 font-bold">Nuclear</p>
                     <div className="flex gap-3">
-                        <div className="w-1/2 relative overflow-hidden group hover:rounded-2xl">
+                        <div
+                            className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
+                            style={{ ...hoverStyle }}
+                        >
                             <img
                                 src={img1}
                                 alt="Nuclear Image 1"
                                 className="transition duration-300"
                             />
                             <div className={overlayStyle}></div>
-                            <div className={cardStyle}>
+                            <div className={cardStyle} style={{ ...hoverStyle }}>
                                 <div className="flex justify-between">
-                                    <div><p className="md:text-[16px] text-sm">Aerospace & Defence</p></div>
-                                    <div><FiArrowRightCircle size={30}/></div>
+                                    <div>
+                                        <p className="md:text-[16px] text-sm">Aerospace & Defence</p>
+                                    </div>
+                                    <div>
+                                        <FiArrowRightCircle size={30} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2 relative overflow-hidden group hover:rounded-2xl">
+                        <div
+                            className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
+                            style={{ ...hoverStyle }}
+                        >
                             <img
                                 src={img2}
                                 alt="Nuclear Image 2"
                                 className="rounded-b-none transition duration-300"
                             />
                             <div className={overlayStyle}></div>
-                            <div className={cardStyle}>
+                            <div className={cardStyle} style={{ ...hoverStyle }}>
                                 <div className="flex justify-between">
-                                    <div><p>Digital health</p></div>
-                                    <div><FiArrowRightCircle size={30}/></div>
+                                    <div>
+                                        <p>Digital health</p>
+                                    </div>
+                                    <div>
+                                        <FiArrowRightCircle size={30} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -64,31 +82,45 @@ const Industries = () => {
                     <hr className="border-t-2 border-gray-500" />
                     <p className="text-[16px] py-7 font-bold">Automotive</p>
                     <div className="flex gap-3">
-                        <div className="w-1/2 relative overflow-hidden group hover:rounded-2xl">
+                        <div
+                            className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
+                            style={{ ...hoverStyle }}
+                        >
                             <img
                                 src={img3}
                                 alt="Automotive Image 1"
                                 className="rounded-b-none transition duration-300"
                             />
                             <div className={overlayStyle}></div>
-                            <div className={cardStyle}>
+                            <div className={cardStyle} style={{ ...hoverStyle }}>
                                 <div className="flex justify-between">
-                                    <div><p>Rail & Transportation</p></div>
-                                    <div><FiArrowRightCircle size={30}/></div>
+                                    <div>
+                                        <p>Rail & Transportation</p>
+                                    </div>
+                                    <div>
+                                        <FiArrowRightCircle size={30} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2 relative overflow-hidden group hover:rounded-2xl">
+                        <div
+                            className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
+                            style={{ ...hoverStyle }}
+                        >
                             <img
                                 src={img4}
                                 alt="Automotive Image 2"
                                 className="rounded-b-none transition duration-300"
                             />
                             <div className={overlayStyle}></div>
-                            <div className={cardStyle}>
+                            <div className={cardStyle} style={{ ...hoverStyle }}>
                                 <div className="flex justify-between">
-                                    <div><p>Medical Devices</p></div>
-                                    <div><FiArrowRightCircle size={30}/></div>
+                                    <div>
+                                        <p>Medical Devices</p>
+                                    </div>
+                                    <div>
+                                        <FiArrowRightCircle size={30} />
+                                    </div>
                                 </div>
                             </div>
                         </div>

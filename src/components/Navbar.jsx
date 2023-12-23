@@ -239,7 +239,7 @@ const Navbar = () => {
                         Our Work
                     </div>
                 </Link>
-                <Link to="herbs" spy={true} smooth={true} duration={500}>
+                <Link to="blogs" spy={true} smooth={true} duration={500}>
                     <div className="cursor-pointer hover:text-xl hover:font-extrabold">
                         Resources
                     </div>
@@ -271,8 +271,8 @@ const Navbar = () => {
             <div
                 className={
                     !nav
-                        ? "fixed left-[-100%] top-0 w-[60%] h-full border-r border-r-gray bg-white ease-in-out duration-500 md:hidden"
-                        : "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray ease-in-out bg-white duration-500 md:hidden"
+                        ? "fixed left-[-100%] top-0 w-[60%] h-full border-r border-r-gray bg-white ease-in-out duration-500 lg:hidden"
+                        : "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray ease-in-out bg-white duration-500 lg:hidden"
                 }
             >
                 <h1 className="font-bold m-8 text-black">
@@ -364,7 +364,7 @@ const Navbar = () => {
                     </li>
                     <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
-                            to="herbs"
+                            to="blogs"
                             onClick={() => {
                                 setNav(false);
                             }}

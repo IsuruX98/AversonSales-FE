@@ -5,7 +5,7 @@ const Difference = () => {
     return (
         <div className="flex flex-row px-4 lg:px-8 py-4 lg:pb-20">
             {/* Left div with heading, description, and button */}
-            <div className="p-8 xl:px-32 px-10 md:w-1/2 flex flex-col justify-center gap-8">
+            <div className="lg:p-8 xl:px-32 px-10 md:pb-0 pb-8 md:w-1/2 flex flex-col justify-center gap-8">
                 <div>
                     <h1 className="text-2xl lg:text-4xl mb-4">
                         The Avero<br/>
@@ -22,7 +22,7 @@ const Difference = () => {
                 </div>
                 <div>
                     <button
-                        className="mt-4 py-2 px-6 rounded-full flex items-center justify-center gap-2  bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
+                        className="lg:mt-4 py-2 px-6 rounded-full flex items-center justify-center gap-2  bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
                         Learn More
                     </button>
                 </div>
