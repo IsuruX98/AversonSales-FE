@@ -224,17 +224,17 @@ const Navbar = () => {
                         </Link>
                     </h3>
                 </div>
-                <Link to="about" spy={true} smooth={true} duration={500}>
+                <Link to="industries" spy={true} smooth={true} duration={500}>
                     <div className="cursor-pointer hover:text-xl hover:font-extrabold">
                         About
                     </div>
                 </Link>
-                <Link to="services" spy={true} smooth={true} duration={500}>
+                <Link to="solutions" spy={true} smooth={true} duration={500}>
                     <div className="cursor-pointer hover:text-xl hover:font-extrabold">
                         Solutions
                     </div>
                 </Link>
-                <Link to="menu" spy={true} smooth={true} duration={500}>
+                <Link to="work" spy={true} smooth={true} duration={500}>
                     <div className="cursor-pointer hover:text-xl hover:font-extrabold">
                         Our Work
                     </div>
@@ -325,7 +325,7 @@ const Navbar = () => {
                 <ul className="p-4 mt-20 text-black">
                     <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
-                            to="about"
+                            to="industries"
                             onClick={() => {
                                 setNav(false);
                             }}
@@ -338,7 +338,7 @@ const Navbar = () => {
                     </li>
                     <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
-                            to="services"
+                            to="solutions"
                             onClick={() => {
                                 setNav(false);
                             }}
@@ -351,7 +351,7 @@ const Navbar = () => {
                     </li>
                     <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
-                            to="menu"
+                            to="work"
                             onClick={() => {
                                 setNav(false);
                             }}

@@ -4,7 +4,7 @@ import heroImage2 from "../asserts/images/careers2.png";
 
 const Careers = () => {
   return (
-      <div className="flex flex-row gap-4 xl:px-40 px-16 py-4 lg:pb-28 pb-12">
+      <div className="flex flex-row items-center gap-4 xl:px-40 px-16 lg:pb-28 md:py-12 pb-20">
           {/* Left div with heading, description, and button */}
           <div className="md:w-1/3 flex flex-col justify-center gap-5">
               <div>
@@ -24,14 +24,14 @@ const Careers = () => {
               </div>
               <div>
                   <button
-                      className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
+                      className="mt-4 py-2 px-6 rounded-full flex items-center justify-center gap-2  bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
                       Join Now
                   </button>
               </div>
           </div>
 
           {/* Right div with centered image */}
-          <div className="md:w-1/3 flex flex-row justify-center">
+          <div className="md:w-1/3 flex w-64 flex-row justify-center">
               <img
                   src={heroImage}
                   alt="Your Hero Image"
@@ -39,7 +39,7 @@ const Careers = () => {
               />
           </div>
 
-          <div className="md:w-1/3 flex flex-row justify-center">
+          <div className="md:w-1/3 hidden w-64 md:flex flex-row justify-center">
               <img
                   src={heroImage2}
                   alt="Your Hero Image"

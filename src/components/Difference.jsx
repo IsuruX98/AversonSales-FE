@@ -22,7 +22,7 @@ const Difference = () => {
                 </div>
                 <div>
                     <button
-                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
+                        className="mt-4 py-2 px-6 rounded-full flex items-center justify-center gap-2  bg-transparent border-2 border-black text-black hover:bg-[#1A1A1A] hover:text-white transition duration-300">
                         Learn More
                     </button>
                 </div>
@@ -33,7 +33,7 @@ const Difference = () => {
                 <img
                     src={heroImage}
                     alt="Your Hero Image"
-                    className=""
+                    className="rounded-2xl"
                 />
             </div>
         </div>

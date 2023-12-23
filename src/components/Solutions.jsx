@@ -14,7 +14,7 @@ const Solutions = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row px-4 lg:px-8 py-4 lg:pb-20">
+        <div className="flex flex-col lg:flex-row px-4 lg:px-8 py-4 lg:py-20">
             {/* First div with heading and list */}
             <div className="w-full lg:w-1/2 xl:px-32 px-10">
                 <h1 className="text-2xl lg:text-4xl mb-4">

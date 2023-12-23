@@ -4,6 +4,8 @@ import Industries from "../components/Industries";
 import Solutions from "../components/Solutions";
 import Difference from "../components/Difference";
 import Careers from "../components/Careers";
+import Work from "../components/Work";
+import Blogs from "../components/Blogs";
 
 const Home = () => {
     const gradientStyle = {
@@ -46,7 +48,13 @@ const Home = () => {
             <div id="difference">
                 <Difference />
             </div>
-            <div id="Careers">
+            <div id="work">
+                <Work />
+            </div>
+            <div id="blogs">
+                <Blogs />
+            </div>
+            <div id="careers">
                 <Careers />
             </div>
 
