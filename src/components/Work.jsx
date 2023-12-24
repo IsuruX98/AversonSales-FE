@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useRef, useState} from "react";
 import work1 from "../asserts/images/work1.png";
 import work2 from "../asserts/images/work2.png";
 import work3 from "../asserts/images/work3.png";
@@ -7,10 +7,10 @@ import work4 from "../asserts/images/work4.png";
 const Work = () => {
     // Array of work items with image and text
     const works = [
-        { image: work1, text: "Consent Directive for Provincial\n Integrated Client Management System" },
-        { image: work2, text: "Cancer Screening Reporting Portal Implementation in SharePoint" },
-        { image: work3, text: "Automated Test Equipment for Landing Gear System Production" },
-        { image: work4, text: "Automated Test Equipment for\nLanding Gear System Production" },
+        {image: work1, text: "Consent Directive for Provincial\n Integrated Client Management System"},
+        {image: work2, text: "Cancer Screening Reporting Portal Implementation in SharePoint"},
+        {image: work3, text: "Automated Test Equipment for Landing Gear System Production"},
+        {image: work4, text: "Automated Test Equipment for\nLanding Gear System Production"},
     ];
 
     // Ref for the container div
@@ -64,7 +64,7 @@ const Work = () => {
                 <div className="lg:p-8 xl:px-40 px-14">
                     <h1 className="text-[16px] mb-4">OUR WORK</h1>
                     <h1 className="text-2xl lg:text-4xl mb-4">
-                        vital component of global transportation,<br />
+                        vital component of global transportation,<br/>
                         connecting people and goods
                     </h1>
                 </div>
@@ -103,7 +103,7 @@ const Work = () => {
                             <img
                                 src={work.image}
                                 alt={`work-${index}`}
-                                style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+                                style={{width: "100%", height: "auto", maxWidth: "100%"}}
                                 className="rounded-2xl"
                             />
 
@@ -114,7 +114,7 @@ const Work = () => {
                                 >
                                     <p
                                         className="text-white absolute bottom-5 left-0 right-0 mx-2 sm:mx-5"
-                                        dangerouslySetInnerHTML={{ __html: work.text }}
+                                        dangerouslySetInnerHTML={{__html: work.text}}
                                     />
                                 </div>
                             </div>

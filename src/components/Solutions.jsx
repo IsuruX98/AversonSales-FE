@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import sol1 from "../asserts/images/sol1.png";
 import sol2 from "../asserts/images/sol2.png";
 import sol3 from "../asserts/images/sol3.png";
@@ -21,13 +21,13 @@ const Solutions = () => {
             <div className="w-full lg:w-1/2 xl:px-32 px-10">
                 <h1 className="text-2xl lg:text-4xl mb-8">
                     Lorem ipsum
-                    <br />
+                    <br/>
                     <span className="font-bold">connecter</span> Auctor
                 </h1>
 
                 {/* List of items */}
                 <div className="text-lg xl:text-2xl mt-4 lg:mt-16 flex flex-col gap-3 lg:gap-8">
-                    {Array.from({ length: 6 }).map((_, index) => (
+                    {Array.from({length: 6}).map((_, index) => (
                         <div
                             key={index}
                             className={`flex flex-row text-[#808080] hover:text-black hover:border-black justify-between border-b border-gray-300 pb-2 lg:pb-9`}
@@ -52,8 +52,8 @@ const Solutions = () => {
                 {/* Description */}
                 <p className="text-[#4D4D4D] xl:pt-16 py-5 xl:text-xl">
                     Access to the right engineering staff and embedded control
-                    <br /> systems expertise to design and integrate your product
-                    <br /> correctly, the first time.
+                    <br/> systems expertise to design and integrate your product
+                    <br/> correctly, the first time.
                 </p>
             </div>
         </div>
@@ -61,7 +61,7 @@ const Solutions = () => {
 };
 
 // Object mapping image keys to their respective paths
-const images = { sol1, sol2, sol3, sol4, sol5, sol6 };
+const images = {sol1, sol2, sol3, sol4, sol5, sol6};
 
 // Labels for the list items
 const itemLabels = [
