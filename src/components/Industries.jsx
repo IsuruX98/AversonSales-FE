@@ -21,7 +21,7 @@ const Industries = () => {
 
     const imageHoverStyle = (index) => {
         return {
-            transform: isCardHovered[index] ? "scale(1.05)" : "scale(1)", // Adjust the scale value as needed
+            transform: isCardHovered[index] ? "scale(1.05)" : "scale(1)",
             transition: "transform 0.8s ease-in-out",
         };
     };

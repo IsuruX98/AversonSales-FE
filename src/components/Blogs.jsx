@@ -31,7 +31,7 @@ const Blogs = () => {
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust the multiplier for smoother scrolling
+    const walk = (x - startX) * 2;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -48,7 +48,7 @@ const Blogs = () => {
   const handleTouchMove = (e) => {
     if (!isDragging) return;
     const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust the multiplier for smoother scrolling
+    const walk = (x - startX) * 2;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 

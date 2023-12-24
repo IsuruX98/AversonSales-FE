@@ -26,7 +26,7 @@ const Work = () => {
     const handleMouseMove = (e) => {
         if (!isDragging) return;
         const x = e.pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust the multiplier for smoother scrolling
+        const walk = (x - startX) * 2;
         containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -43,7 +43,7 @@ const Work = () => {
     const handleTouchMove = (e) => {
         if (!isDragging) return;
         const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust the multiplier for smoother scrolling
+        const walk = (x - startX) * 2;
         containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -66,7 +66,7 @@ const Work = () => {
                     className="flex gap-6 sm:gap-20 p-8 xl:px-40 px-14 cursor-grab relative group"
                     style={{
                         flex: "0 0 auto",
-                        whiteSpace: "normal", // Allow line breaks
+                        whiteSpace: "normal",
                         overflowX: "hidden",
                         overflowY: "hidden",
                         userSelect: isDragging ? "none" : "auto",
@@ -86,7 +86,7 @@ const Work = () => {
                             style={{
                                 flex: "0 0 auto",
                                 minWidth: "100px",
-                                marginBottom: "10px", // Add margin between works for smaller screens
+                                marginBottom: "10px",
                             }}
                         >
                             <img
