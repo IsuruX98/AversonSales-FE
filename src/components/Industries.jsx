@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import img1 from "../asserts/images/img1.png";
 import img2 from "../asserts/images/img2.png";
 import img3 from "../asserts/images/img3.png";
@@ -6,6 +6,9 @@ import img4 from "../asserts/images/img4.png";
 import { FiArrowRightCircle } from "react-icons/fi";
 
 const Industries = () => {
+
+    const [isCardHovered, setIsCardHovered] = useState([false, false, false, false]);
+
     const overlayStyle =
         "absolute inset-0 bg-black hover:bg-opacity-0 bg-opacity-40 transition duration-300";
 
@@ -15,6 +18,29 @@ const Industries = () => {
     const hoverStyle = {
         transition: "0.8s ease-in-out",
     };
+
+    const imageHoverStyle = (index) => {
+        return {
+            transform: isCardHovered[index] ? "scale(1.05)" : "scale(1)", // Adjust the scale value as needed
+            transition: "transform 0.8s ease-in-out",
+        };
+    };
+
+    const handleMouseEnter = (index) => {
+        const newIsCardHovered = [...isCardHovered];
+        newIsCardHovered[index] = true;
+        setIsCardHovered(newIsCardHovered);
+    };
+
+    const handleMouseLeave = (index) => {
+        const newIsCardHovered = [...isCardHovered];
+        newIsCardHovered[index] = false;
+        setIsCardHovered(newIsCardHovered);
+    };
+
+    useEffect(() => {
+        // to ensure that the state is updated before applying styles
+    }, [isCardHovered]);
 
     return (
         <div className="">
@@ -36,11 +62,14 @@ const Industries = () => {
                         <div
                             className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
                             style={{ ...hoverStyle }}
+                            onMouseEnter={() => handleMouseEnter(0)}
+                            onMouseLeave={() => handleMouseLeave(0)}
                         >
                             <img
                                 src={img1}
-                                alt="Nuclear Image 1"
+                                alt="Nuclear 1"
                                 className="transition duration-300"
+                                style={imageHoverStyle(0)}
                             />
                             <div className={overlayStyle}></div>
                             <div className={cardStyle} style={{ ...hoverStyle }}>
@@ -57,11 +86,14 @@ const Industries = () => {
                         <div
                             className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
                             style={{ ...hoverStyle }}
+                            onMouseEnter={() => handleMouseEnter(1)}
+                            onMouseLeave={() => handleMouseLeave(1)}
                         >
                             <img
                                 src={img2}
-                                alt="Nuclear Image 2"
+                                alt="Nuclear 2"
                                 className="rounded-b-none transition duration-300"
+                                style={imageHoverStyle(1)}
                             />
                             <div className={overlayStyle}></div>
                             <div className={cardStyle} style={{ ...hoverStyle }}>
@@ -85,11 +117,14 @@ const Industries = () => {
                         <div
                             className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
                             style={{ ...hoverStyle }}
+                            onMouseEnter={() => handleMouseEnter(2)}
+                            onMouseLeave={() => handleMouseLeave(2)}
                         >
                             <img
                                 src={img3}
-                                alt="Automotive Image 1"
+                                alt="Automotive 1"
                                 className="rounded-b-none transition duration-300"
+                                style={imageHoverStyle(2)}
                             />
                             <div className={overlayStyle}></div>
                             <div className={cardStyle} style={{ ...hoverStyle }}>
@@ -106,11 +141,14 @@ const Industries = () => {
                         <div
                             className={`w-1/2 relative overflow-hidden group lg:hover:rounded-3xl hover:rounded-xl`}
                             style={{ ...hoverStyle }}
+                            onMouseEnter={() => handleMouseEnter(3)}
+                            onMouseLeave={() => handleMouseLeave(3)}
                         >
                             <img
                                 src={img4}
-                                alt="Automotive Image 2"
+                                alt="Automotive 2"
                                 className="rounded-b-none transition duration-300"
+                                style={imageHoverStyle(3)}
                             />
                             <div className={overlayStyle}></div>
                             <div className={cardStyle} style={{ ...hoverStyle }}>
@@ -126,9 +164,6 @@ const Industries = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-start px-20 mt-10 gap-5">
-                {/* Additional Content */}
             </div>
         </div>
     );
