@@ -3,15 +3,19 @@ import axios from '../apis/axios';
 import BlogCard from './BlogCard';
 
 const Blogs = () => {
+
     // State for storing blog data
     const [blogData, setBlogData] = useState([]);
 
     // Ref for the container element
     const containerRef = useRef(null);
+
     // State to track dragging status
     const [isDragging, setIsDragging] = useState(false);
+
     // State to store initial mouse/touch position
     const [startX, setStartX] = useState(0);
+
     // State to store initial scroll position
     const [scrollLeft, setScrollLeft] = useState(0);
 

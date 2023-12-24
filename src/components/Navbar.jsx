@@ -3,11 +3,14 @@ import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import {Link} from "react-scroll";
 
 const Navbar = () => {
+    // State variables for managing the component's behavior
     const [isAtTop, setIsAtTop] = useState(true);
     const [visible, setVisible] = useState(true);
     const [nav, setNav] = useState(false);
 
+    // Effect to handle scrolling behavior and update state accordingly
     useEffect(() => {
+        // Variable to keep track of the previous scroll position
         let prevScrollPosition = window.pageYOffset;
 
         // Effect to handle scroll events
@@ -21,7 +24,7 @@ const Navbar = () => {
                 setIsAtTop(false);
             }
 
-            // Determine scroll direction
+            // Adjust visibility and navigation state based on scroll direction
             if (currentPosition > prevScrollPosition) {
                 // Scrolling down
                 setVisible(true);
@@ -36,19 +39,21 @@ const Navbar = () => {
             prevScrollPosition = currentPosition;
         };
 
-        // Attach scroll event listener
+        // Add scroll event listener when the component mounts
         window.addEventListener("scroll", handleScroll);
 
-        // Cleanup: Remove scroll event listener
+        // Remove scroll event listener when the component unmounts
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);// Run effect only on mount and unmount
 
+    // Toggle navigation state when the menu icon is clicked
     const handleNav = () => {
         setNav(!nav);
     };
 
+    // Render the navigation bar with conditional styles based on scroll position
     return (
         <nav
             className={`flex justify-between w-full py-4 lg:px-20 px-12 sticky top-0 z-[999] ${
@@ -137,6 +142,7 @@ const Navbar = () => {
                     </svg>}
             </div>
 
+            {/* Navigation links */}
             <div
                 className={`items-center hidden space-x-12 lg:flex ${
                     isAtTop ? "text-white" : "text-black"
@@ -274,6 +280,7 @@ const Navbar = () => {
 
             </div>
 
+            {/* Mobile Navigation links with smooth scrolling */}
             <div
                 className={
                     !nav
