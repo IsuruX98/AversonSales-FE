@@ -45,7 +45,7 @@ const Solutions = () => {
                 {/* Image */}
                 <img
                     src={images[hoveredItem]}
-                    alt="Your Image"
+                    alt="solution"
                     className="mb-4 lg:mb-0 w-80 transition duration-300 ease-in-out transform hover:scale-105"
                 />
 

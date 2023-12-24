@@ -34,7 +34,7 @@ const Careers = () => {
             <div className="md:w-1/3 flex w-64 flex-row justify-center">
                 <img
                     src={heroImage}
-                    alt="Your Hero Image"
+                    alt="Your Hero"
                     className=""
                 />
             </div>
@@ -42,7 +42,7 @@ const Careers = () => {
             <div className="md:w-1/3 hidden w-64 md:flex flex-row justify-center">
                 <img
                     src={heroImage2}
-                    alt="Your Hero Image"
+                    alt="Your Hero 2"
                     className=""
                 />
             </div>
