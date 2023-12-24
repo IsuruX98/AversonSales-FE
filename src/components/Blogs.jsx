@@ -27,7 +27,6 @@ const Blogs = () => {
                     'https://api.slingacademy.com/v1/sample-data/blog-posts?offset=5&limit=30'
                 );
                 setBlogData(response.data.blogs);
-                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching blog data:', error);
             }
