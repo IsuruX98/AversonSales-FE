@@ -39,6 +39,7 @@ For a detailed explanation of the code and a demonstration of the website, pleas
 
 ## Screenshots
 
-![Web capture_24-12-2023_111326_localhost](https://github.com/IsuruX98/AversonSales-FE/assets/104721314/7b12aa38-cb36-4356-8921-fe084e845029)
+![Web capture_24-12-2023_115011_localhost](https://github.com/IsuruX98/AversonSales-FE/assets/104721314/8983174c-871a-4972-999e-7d8e6f26eaa4)
+
 
 
