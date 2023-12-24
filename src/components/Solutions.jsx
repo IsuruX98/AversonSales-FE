@@ -7,8 +7,10 @@ import sol5 from "../asserts/images/sol5.png";
 import sol6 from "../asserts/images/sol6.png";
 
 const Solutions = () => {
+    // State to track the currently hovered item
     const [hoveredItem, setHoveredItem] = useState("sol1");
 
+    // Event handler for mouse enter on list items
     const handleMouseEnter = (item) => {
         setHoveredItem(item);
     };
@@ -23,6 +25,7 @@ const Solutions = () => {
                     <span className="font-bold">connecter</span> Auctor
                 </h1>
 
+                {/* List of items */}
                 <div className="text-lg xl:text-2xl mt-4 lg:mt-16 flex flex-col gap-3 lg:gap-8">
                     {Array.from({ length: 6 }).map((_, index) => (
                         <div
@@ -39,11 +42,14 @@ const Solutions = () => {
 
             {/* Second div with image and description */}
             <div className="flex lg:flex-col flex-row lg:gap-0 md:gap-24 w-full lg:w-1/2 xl:px-32 px-10 xl:pt-20 pt-10">
+                {/* Image */}
                 <img
                     src={images[hoveredItem]}
                     alt="Your Image"
                     className="mb-4 lg:mb-0 w-80 transition duration-300 ease-in-out transform hover:scale-105"
                 />
+
+                {/* Description */}
                 <p className="text-[#4D4D4D] xl:pt-16 py-5 xl:text-xl">
                     Access to the right engineering staff and embedded control
                     <br /> systems expertise to design and integrate your product
@@ -54,7 +60,10 @@ const Solutions = () => {
     );
 };
 
+// Object mapping image keys to their respective paths
 const images = { sol1, sol2, sol3, sol4, sol5, sol6 };
+
+// Labels for the list items
 const itemLabels = [
     "Embedded Systems Development",
     "System Integration",

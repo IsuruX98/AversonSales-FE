@@ -10,8 +10,11 @@ const Navbar = () => {
     useEffect(() => {
         let prevScrollPosition = window.pageYOffset;
 
+        // Effect to handle scroll events
         const handleScroll = () => {
             const currentPosition = window.pageYOffset;
+
+            // Check if the user is at the top of the page
             if (currentPosition === 0) {
                 setIsAtTop(true);
             } else {
@@ -33,12 +36,14 @@ const Navbar = () => {
             prevScrollPosition = currentPosition;
         };
 
+        // Attach scroll event listener
         window.addEventListener("scroll", handleScroll);
 
+        // Cleanup: Remove scroll event listener
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, []);// Run effect only on mount and unmount
 
     const handleNav = () => {
         setNav(!nav);
@@ -54,6 +59,7 @@ const Navbar = () => {
         >
 
             <div className="cursor-pointer lg:hidden">
+                {/* Conditional rendering of menu icon based on scroll position */}
                 {isAtTop ?
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
                          fill="none">

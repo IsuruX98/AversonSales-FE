@@ -5,6 +5,7 @@ import work3 from "../asserts/images/work3.png";
 import work4 from "../asserts/images/work4.png";
 
 const Work = () => {
+    // Array of work items with image and text
     const works = [
         { image: work1, text: "Consent Directive for Provincial\n Integrated Client Management System" },
         { image: work2, text: "Cancer Screening Reporting Portal Implementation in SharePoint" },
@@ -12,11 +13,15 @@ const Work = () => {
         { image: work4, text: "Automated Test Equipment for\nLanding Gear System Production" },
     ];
 
+    // Ref for the container div
     const containerRef = useRef(null);
+
+    // State to track dragging status and coordinates
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
+    // Event handlers for mouse events
     const handleMouseDown = (e) => {
         setIsDragging(true);
         setStartX(e.pageX - containerRef.current.offsetLeft);
@@ -34,6 +39,7 @@ const Work = () => {
         setIsDragging(false);
     };
 
+    // Event handlers for touch events
     const handleTouchStart = (e) => {
         setIsDragging(true);
         setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
@@ -54,6 +60,7 @@ const Work = () => {
     return (
         <div className="py-6 overflow-hidden relative">
             <div className="flex flex-col justify-center gap-5">
+                {/* Title and subtitle */}
                 <div className="lg:p-8 xl:px-40 px-14">
                     <h1 className="text-[16px] mb-4">OUR WORK</h1>
                     <h1 className="text-2xl lg:text-4xl mb-4">
@@ -61,6 +68,8 @@ const Work = () => {
                         connecting people and goods
                     </h1>
                 </div>
+
+                {/* Container for work items */}
                 <div
                     ref={containerRef}
                     className="flex gap-6 sm:gap-20 p-8 xl:px-40 px-14 cursor-grab relative group"
@@ -79,6 +88,7 @@ const Work = () => {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
+                    {/* Individual work items */}
                     {works.map((work, index) => (
                         <div
                             key={index}
@@ -89,12 +99,15 @@ const Work = () => {
                                 marginBottom: "10px",
                             }}
                         >
+                            {/* Work item image */}
                             <img
                                 src={work.image}
                                 alt={`work-${index}`}
                                 style={{ width: "100%", height: "auto", maxWidth: "100%" }}
                                 className="rounded-2xl"
                             />
+
+                            {/* Overlay with text */}
                             <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
                                 <div
                                     className="w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../asserts/images/img1.png";
 import img2 from "../asserts/images/img2.png";
 import img3 from "../asserts/images/img3.png";
@@ -6,9 +6,10 @@ import img4 from "../asserts/images/img4.png";
 import { FiArrowRightCircle } from "react-icons/fi";
 
 const Industries = () => {
-
+    // State to track card hover status
     const [isCardHovered, setIsCardHovered] = useState([false, false, false, false]);
 
+    // Styles for overlay, card, and hover effect
     const overlayStyle =
         "absolute inset-0 bg-black hover:bg-opacity-0 bg-opacity-40 transition duration-300";
 
@@ -19,6 +20,7 @@ const Industries = () => {
         transition: "0.8s ease-in-out",
     };
 
+    // Function to apply hover effect on image
     const imageHoverStyle = (index) => {
         return {
             transform: isCardHovered[index] ? "scale(1.05)" : "scale(1)",
@@ -26,6 +28,7 @@ const Industries = () => {
         };
     };
 
+    // Event handlers for mouse enter and leave
     const handleMouseEnter = (index) => {
         const newIsCardHovered = [...isCardHovered];
         newIsCardHovered[index] = true;
@@ -48,7 +51,7 @@ const Industries = () => {
                 <p className="lg:ml-72 md:px-20 px-10 md:py-20 pt-10 text-black lg:text-2xl font-normal leading-8">
                     Traditional: Avero delivers leading-edge and reliable safety-
                     <br />
-                    critical electronics, software systems, expert resources and
+                    critical electronics, software systems, expert resources, and
                     <br />
                     business-fortifying solutions.
                 </p>

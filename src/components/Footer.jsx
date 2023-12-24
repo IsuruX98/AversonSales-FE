@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -8,7 +8,9 @@ const Footer = () => {
                 {/* First Column */}
                 <div className="w-full xl:w-1/3 mb-8 xl:mb-0 xl:pt-16">
                     <p className="md:text-base">
-                        Avero Inc. is a multi-service engineering firm specializing in design, build, testing, certification, and support services for embedded flight systems & software, health technology, and advanced IT.
+                        Avero Inc. is a multi-service engineering firm specializing in design, build, testing,
+                        certification, and support services for embedded flight systems & software, health technology,
+                        and advanced IT.
                     </p>
                 </div>
 
@@ -38,7 +40,8 @@ const Footer = () => {
             </div>
 
             {/* Additional Content */}
-            <div className="container mx-auto flex flex-col xl:flex-row lg:justify-between px-6 md:px-10 md:py-10 pt-5 pb-10">
+            <div
+                className="container mx-auto flex flex-col xl:flex-row lg:justify-between px-6 md:px-10 md:py-10 pt-5 pb-10">
                 {/* First Column */}
                 <div className="w-full xl:w-1/3 mb-8">
                     <div className="flex flex-row md:gap-10 gap-3">
@@ -57,9 +60,9 @@ const Footer = () => {
 
                 {/* Third Column */}
                 <div className="w-full xl:w-1/3 xl:pl-56 mb-8 flex xl:gap-10 gap-3">
-                    <FaFacebook size={24} className="text-white" />
-                    <FaInstagram size={24} className="text-white" />
-                    <FaTwitter size={24} className="text-white" />
+                    <FaFacebook size={24} className="text-white"/>
+                    <FaInstagram size={24} className="text-white"/>
+                    <FaTwitter size={24} className="text-white"/>
                 </div>
             </div>
         </footer>
